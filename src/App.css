@@ -1,38 +1,1077 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Inconsolata', monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ 
+/* estilos  pagina principal  gif */
+.gif  {
+    background-image: url(./pokemon-logo.gif) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;  
+   
+}
+
+/* estilos de las card  de la pagina pokemon */
+
+.pokemonList {
+    /* display: flex;
+    flex-wrap: wrap; */
+     list-style: none; 
+    /* position: relative;
+    top: 40px;    */
+
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    row-gap: 2.5rem;
+    column-gap: 6rem;
+    margin:20px;
+    width: 640px;  
+ 
+}
+
+.pokemon-column {
+    width: 100%;
+   position: relative;
+    right:13px; 
+    font-size:30px;
+    margin: 20px;
+ 
+    
+   
+}
+
+.card {   
+    padding: 25px;
+    box-shadow: 2px 2px 8px rgba(0, 0 , 0, .3);
+    display: block;
+    text-decoration: none;
+    color:rgba(0, 0, 0, .8);
+    height: 100%;
+    border-radius: 20px;    
+}
+
+.card img{
+    height: 200px;
+    display: block;
+}
+/* estilos de la paginacion numero de paginas */
+.page {
+    display: inline-block;
+    margin: 10px ;
+}
+
+/* pagina principal  */
+
+.input-title {
+    position: relative;
+    top: 400px;
+    left: 550px;
+    width: 280px;
+    height: 30px;
+    opacity: .2;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.principal {
+    position: relative;
+    left: 350px;
+    top: 360px;
+    background-image: url(./Pokebola-pokeball-png-0.png);
+    background-size: cover;
+    width: 100px;
+    background-color: transparent;
+    height: 100px;
+    border:none;   
+
+}
+
+.enter {
+    position: relative;
+    top: 350px;
+    color: white;
+    left: 600px;
+}
+
+.title {
+    position: relative;
+    top: 300px;
+    color: white;
+    left: 580px;
+}
+
+/* estilos card de pokemoninfo */
+
+.name-pokemon {
+    text-align: center;
+    position: relative;
+    bottom: 190px;
+    font-size: 50px;
+    
+}
+
+.img-pokemon {
+    position: relative;
+    top:100px ;
+    left: 230px;
+    width: 300px;
+    height: 300px;    
+}
+.id {
+    text-align: right;
+   position: relative;
+   top: 20px;
+   font-size: 25px;
+}
+
+.wei {
+    text-align:left;
+    position: relative;
+    bottom: 10px;
+}
+
+.hei {
+    text-align: left;
+}
+
+/* estilos pagina com todas las card  diseño  de titulo  e input */
+
+.title-pokemon {
+    /* text-align:center ;
+    padding: 20px;    
+    color: yellow; */
+    background-image: url(./2560px-International_Pokémon_logo.svg.png);
+    background-size: cover;
+    width: 210px;
+    margin: 0 auto;
+    height: 75px;
+    position: relative;
+    left: 100px;
+    top: 10px;
+}
+
+.poke-banner {       
+     /* position: fixed; */
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    border:none;   
+   height: 30%;
+   width: 170%;
+   border:3px solid black;
+   border-radius: 25px; 
+   position: relative;
+   left: 15px;
+   top: 15px;
+    background-color: #fff;    
+}
+
+.welcome {
+    position: relative;
+    bottom: 50px;
+    left: 20px;
+    font-size: 30px;
+    color: black;
+}
+
+.search {
+    position: relative;
+    left: 130px;
+    height: 30px;
+    width: 200px;
+    bottom: 30px;
+    text-align:center ;
+}
+
+.btn-search {
+    position: relative;
+    left: 140px;
+    bottom: 10px;
+    background-image: url(./Pokebola-pokeball-png-0.png);
+    background-size: cover;
+    width: 50px;
+    background-color: transparent;
+    height: 50px;
+    border:none;
+}
+
+.select-poke {
+    position: relative;
+    left: 60px;
+    height: 30px;
+    width: 200px;
+    bottom: 30px;
+}
+
+.select-type {
+    position: relative;
+    left: 80px;
+    bottom: 10px;
+    color: black;
+}
+
+/* estilos en la paginacion */
+
+.pages {
+    position: relative;
+    top: 100px;
+    text-align:center ;
+    color: black;
+}
+
+.previouspage {
+    position:relative;
+    bottom: 1650px;
+    left: 30px;
+}
+
+.nextpage {
+    position:relative;
+    bottom: 1650px;
+    right:130px;
+     }
+
+.page {
+    position:relative;
+    bottom: 1650px; 
+    right: 170px; 
+}
+
+.btn-number {   
+    margin: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    bottom: 30px;
+}
+
+.btn-number:hover {
+    background-color: yellow;
+}
+
+/* estilos pagina pokemon detail  */
+.poke-container {
+    height: 110vh;
+    width: 90%;
+    border:5px solid black;
+    position: relative;
+    left: 50px;
+    top:40px;
+    border-radius: 30px;  
+}
+
+.img-pokes {
+   /* border:5px solid black; */
+   position: relative;
+   left: 140px;
+   bottom: 730px;
+   height: 500px;
+   width: 500px;
+   }
+
+   .pokehei {
+       position: relative;
+       left: 290px;
+       top:160px;
+   }
+
+   .pokewei {
+       position: relative;
+       left: 290px;
+       top:180px;
+   }
+
+   .pokename {
+       position: relative;
+       left: 50px;
+       top: 150px;
+       font-size: 50px;
+   }
+
+   .pokeid {
+    position: relative;
+    left: 40px;
+    bottom: 60px;
+    font-size: 20px;
+   }
+
+   .poketype {
+       position: relative;
+       top: 300px;
+       left: 80px;
+       font-size: 30px;
+   }
+
+   .pokemove {
+       position: relative;
+       left: 1100px;
+   }
+
+   .pokestan {
+       font-size: 30px ;
+       position: relative;
+       left: 850px;
+       bottom: 100px;
+       height: 500px;
+       width: 300px;
+       /* border: 4px solid black; */
+       padding: 30px;
+
+    }
+
+    .poke-base {
+        margin: 10px;
+        text-align-last: center;
+        padding: 5px;
+    }
+
+    .btn-stat {
+        margin: 10px;
+        position: relative;
+        left: 50px;
+        top: 20px;
+        border-radius: 20px;
+    }
+
+    .btn-stat:hover {
+        background-color: yellow;
+
+    }
+
+    .selectpokemon {
+        position: relative;
+        bottom: 630px;
+        left: 350px;
+        background-image: url(./pokebolaespecial1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 118px;
+        width: 117px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+    }
+
+    .selectAbilities {        
+        position: relative;
+        bottom: 630px;
+        left: 500px;
+        background-image: url(./pokebolaespecial1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 118px;
+        width: 117px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+    }
+
+    .btn-type {
+        height: 30px;
+        width: 80px;
+        border-radius: 20px;
+    }
+
+    .title-abi {
+     position: relative;
+     left: 630px;
+     font-size: 25px;
+     bottom: 20px;
+    }
+
+    .title-mov {
+        position: relative;
+        left: 340px;
+        font-size: 25px;
+        bottom: 45px;
+    }
+
+    /* estilos  boton modo oscuro */
+
+.dark {
+    background-color: #fff ;
+ filter: invert(1);
+ height: 100%;
+}
+
+.dark-mode{
+    color: white;
+    position: relative;    
+}
+
+.light-mode {
+    color: black;
+}
+
+.light-mode .poke-banner.welcome{
+    color: black;
+}
+
+.dark-mode.poke-banner.welcome {
+    color: white;
+}
+
+.pokeinfo {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.mode-dark {
+    color: black;
+    position: relative;
+    bottom: 1650px;
+    left: 1200px; 
+    background-color: white;  
+    bottom: 1900px;
+    left: 830px;    
+} 
+
+.title-dark{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.light-btn {
+    position: relative;
+    right: 10px;
+}
+
+.light-label {
+    position: relative;
+    right: 10px;
+}
+
+/* ESTILOS BOTON PARA REGRESAR A PAGINA POKEMONES */
+
+
+.fa-hand-point-left {
+    font-size: 70px;
+    position: relative;
+    left: 350px;
+    bottom: 1150px;
+}
+
+.back-page {
+    position: relative;
+    bottom: 1200px;
+    left: 1110px;
+}
+
+/* Estilos responsive pokedex */
+
+@media (min-width: 576px) {
+    .pokemonList {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 820px;
+    } 
+
+    .poke-banner {
+        width: 840px;
+    }
+
+    .search {
+        position: relative;
+        left: 370px;
+        width: 180px;
+    }
+
+    .btn-search {
+        position: relative;
+        left: 380px;
+    }
+
+    .select-type {
+        position: relative;
+        right: 10px;
+        bottom: 20px;
+    }
+
+    .select-poke {
+        width: 180px;
+        position: relative;
+        left: 50px;
+    }
+
+    .mode-dark {
+        position: relative;
+        bottom: 8480px;
+        left: 700px;
+    }
+
+    .previouspage{
+        position: relative;
+        bottom: 8460px;
+        left: 280px;        
+    }
+    .nextpage {
+    position: relative;
+    bottom: 8460px;
+    left: 120px;
+    }
+
+    .page {
+ position: relative;
+ bottom: 8460px;
+ left: 110px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .pokemonList {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 750px;
+    }
+    .img-pokemon {
+    position: relative;
+    top:30px ;
+    left: 0;
+    width: 300px;
+  
+    height: 300px; 
+    }
+
+    .name-pokemon {
+        font-size: 30px;
+    }
+
+    .hei {
+        font-size: 30px;
+    }
+
+    .wei {
+        font-size: 30px; 
+    }
+
+     .title-pokemon{
+         position: relative;
+        left: 100px;
+    }  
+
+    .welcome {
+        position: relative;
+        left: 50px;
+    }
+
+    .btn-number {
+        position: relative;
+        left: 90px;
+    }
+
+    .poke-banner {
+        width: 780px;
+    }
+
+    .search {
+        position: relative;
+        left: 250px;
+        width: 180px;
+    }
+
+    .btn-search {
+        position: relative;
+        left: 300px;
+    }
+
+    .select-type {
+        position: relative;
+        right: 10px;
+        bottom: 20px;
+    }
+
+    .select-poke {
+        width: 180px;
+        position: relative;
+        right: 13px;
+    }
+
+    .mode-dark {
+        position: relative;
+        bottom: 4020px;
+        left: 660px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .pokemonList {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 890px;
+    }
+    .img-pokemon {
+       position: relative;
+       top: -5px;
+       left:-25px;
+       
+        width: 230px;
+    }
+
+    .name-pokemon {
+        font-size: 20px;
+        position: relative;
+        bottom: 220px;
+    }
+
+    .hei {
+        font-size: 25px;
+    }
+
+    .wei {
+        font-size: 25px; 
+    }
+
+    .id {
+        position: relative;
+        left: 20px;
+        top: -30px;
+    }
+
+    .poke-banner {
+        width: 900px;
+    }
+
+    .btn-number {
+        position: relative;
+        left: 40px;
+    }
+
+    .btn-search {
+        position: relative;
+        left: 390px;
+    }
+    
+    .select-poke {
+        position: relative;
+        bottom: 30px;
+    }  
+
+    .title-pokemon {
+        position: relative;
+        left: 30px;
+    }
+    .search {
+        position: relative;
+        left: 360px;
+    }
+
+    .mode-dark {
+        position: relative;
+        bottom: 2890px;
+        left: 750px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .pokemonList {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        width: 1000px;
+        margin: 10px;
+    }
+
+    .img-pokemon {
+        position: relative;
+        top: -px;
+        left:-30px;        
+        width: 180px;
+     }
+ 
+      .name-pokemon {
+         font-size: 15px;
+         position: relative;
+         bottom: 220px;
+     }
+ 
+     .hei {
+         font-size: 20px;
+     }
+ 
+     .wei {
+         font-size: 20px; 
+     }
+ 
+     .id {
+         position: relative;
+         left: 20px;
+         top: -30px;
+         
+     }
+ 
+     .poke-banner {
+         width: 1000px;
+     }
+ 
+     .btn-number {
+         position: relative;
+         left: 0;
+     }
+ 
+     .btn-search {
+         position: relative;
+         left: 490px;
+     }
+     
+     .select-poke {
+         position: relative;
+         bottom: 35px;
+         right: 20px;
+     }   
+
+     .search {
+         position: relative;
+         left: 460px;
+         bottom: 40px;
+     }
+
+     .title-pokemon {
+         position: relative;
+         bottom: 20px;
+         left: 20px;
+     }
+}
+
+/* Estilos responsive pokemondetail */
+
+@media (min-width: 768px) {
+    .poke-container{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 820px;
+        height: 800px;
+    }
+
+    .img-pokes {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        left: 10px;
+        top: -600px;
+        bottom: 130px;        
+    }
+
+    .pokehei {
+        position: relative;
+        top: 350px;
+        left: 60px;
+        font-size: 30px;
+    }
+
+    .pokewei {
+        position: relative;
+        top: 250px;
+        left: 60px;
+        font-size: 30px;
+    }
+
+    .pokename {
+        position: relative;
+        top: 40px;
+        text-align: center;        
+    }
+
+    .poketype {
+        position: relative;
+        top: 440px;
+    }
+
+    .pokemove {
+        position: relative;
+        left: 350px;
+    }
+
+    .pokestan {
+        position: relative;
+        left: 520px;
+        bottom: 70px;
+    }
+
+    .selectpokemon {
+        position: relative;
+        bottom: 460px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .selectAbilities {
+        position: relative;
+        bottom: 460px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .title-abi {
+        position: relative;
+        top: 50px;
+        left: 590px;
+    }
+
+    .title-mov {
+        position: relative;
+        top: 25px;
+        left: 330px;
+    }
+
+    .fa-hand-point-left {
+        position: relative;
+        left: 70px;
+        bottom: 1050px;
+    }
+
+    .back-page {
+        position: relative;
+        left: 700px;
+        bottom: 1080px;
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    .poke-container{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 820px;
+        height: 800px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .poke-container{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 820px;
+        height: 800px;
+    }
+}
+  /* responsive  pagina principal */
+
+  @media (min-width: 576px) {
+    .gif {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -220px;
+    right: 0;  
+  }
+  .title {
+      position: relative;
+      left: 400px;
+  }
+
+  .enter {
+    position: relative;
+    left: 400px; 
+  }
+
+  .input-title {
+    position: relative;
+    left: 360px; 
+    top: 280px;
+  }
+
+  .principal {
+    position: relative;
+    left: 180px; 
+    top: 400px;  
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (min-width: 768px) {
+    .gif {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -130px;
+    right: 0;  
+  }
+  .title {
+      position: relative;
+      left: 430px;
+  }
+
+  .enter {
+    position: relative;
+    left: 430px; 
+  }
+
+  .input-title {
+    position: relative;
+    left: 380px; 
+    top: 280px;
+  }
+
+  .principal {
+    position: relative;
+    left: 190px; 
+    top: 400px;  
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width: 992px) {
+    .gif {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -60px;
+    right: 0;  
+  }
+  .title {
+      position: relative;
+      left: 460px;
+  }
+
+  .enter {
+    position: relative;
+    left: 470px; 
+  }
+
+  .input-title {
+    position: relative;
+    left: 430px; 
+    top: 280px;
+  }
+
+  .principal {
+    position: relative;
+    left: 240px; 
+    top: 410px;  
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 1200px) {
+    .gif {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -50px;
+    right: 0;  
   }
-  to {
-    transform: rotate(360deg);
+  .title {
+      position: relative;
+      left: 580px;
+      top: 380px;
+      font-size: 25px;
+  }
+
+  .enter {
+    position: relative;
+    left: 550px; 
+    top: 410px;
+    font-size: 25px;
+  }
+
+  .input-title {
+    position: relative;
+    left:550px; 
+    top: 380px;
+  }
+
+  .principal {
+    position: relative;
+    left: 360px;
+    top: 510px;   
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* .switch {
+        background: #343D5B;
+        border-radius: 1000px;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        outline: none;
+
+           }
+
+.sun {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+.moon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+
+}
+
+.switch::after {
+ content: "";
+ display: block;
+ width: 30px;
+ height: 30px;
+ position: absolute;
+ background: #f1f1f1;
+ top: 0;
+ left: 0;
+ right: unset;
+ border-radius: 100px;
+ transition: .3s ease all;
+ box-shadow: 0px 0px 2px 2px  rgba(0, 0, 0, .2);
+}
+
+ */
+
+
+
+
