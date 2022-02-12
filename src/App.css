@@ -476,6 +476,98 @@ body {
 
 /* Estilos responsive pokedex */
 
+@media (min-width: 360px){
+    .pokemonList {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 320px;
+    } 
+
+    .img-pokemon {
+        position: relative;
+        top:30px ;
+        left: 25px;
+        width: 200px;
+      
+        height: 300px; 
+        }
+    
+        .name-pokemon {
+            font-size: 30px;
+        }
+    
+        .hei {
+            font-size: 25px;
+        }
+    
+        .wei {
+            font-size: 25px; 
+        }
+    
+         .title-pokemon{
+             position: relative;
+            left: 10px;
+            top: -10px;
+            
+        }  
+    
+        .welcome {
+            position: relative;
+            left: 10px;
+            font-size: 15px;
+            top: 55px;
+        }
+    
+        .btn-number {
+            position: relative;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+        }
+    
+        .poke-banner {
+            width: 340px;
+        }
+    
+        .search {
+            position: relative;
+            left: -90px;
+            width: 140px;
+            height: 20px;
+            top: -20px;
+        }
+    
+        .btn-search {
+            position: relative;
+            left: -60px;
+            width: 40px;
+            height: 40px;
+            bottom: 5px;
+        }
+    
+        .select-type {
+            position: relative;
+            left: 200px;
+            bottom: 12px;
+            font-size: 12px;
+            
+        }
+    
+        .select-poke {
+           position: relative;
+            left: 50px;
+            width: 140px;
+            height: 20px;
+            bottom: 50px;
+        }
+    
+        .mode-dark {
+            position: relative;
+            bottom: 4020px;
+            left: 660px;
+        }
+    
+    }
+
 @media (min-width: 576px) {
     .pokemonList {
         grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -749,6 +841,112 @@ body {
 
 /* Estilos responsive pokemondetail */
 
+@media (min-width: 360px){
+    .poke-container{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 350px;
+        height: 750px;
+        position: relative;
+        left: 10px;
+    }
+
+    .img-pokes {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        left: -15px;
+        top: -610px;
+        bottom: 150px;        
+    }
+
+    .pokehei {
+        position: relative;
+        top: 400px;
+        left: 30px;
+        font-size: 20px;
+    }
+
+    .pokewei {
+        position: relative;
+        top: 360px;
+        left: 30px;
+        font-size: 20px;
+    }
+
+    .pokename {
+        position: relative;
+        top: 10px;
+        text-align: center; 
+        font-size: 30px;       
+    }
+
+    .poketype {
+        position: relative;
+        top: -30px;
+        left: 180px;
+        font-size: 20px;
+    }
+
+    .pokemove {
+        position: relative;
+        left: 10px;
+        top: -100px;
+    }
+
+    .pokestan {
+        position: relative;
+        left: 170px;
+        bottom: 50px;
+        width: 20px;
+        font-size: 15px;
+    }
+
+    .selectpokemon {
+        position: relative;
+        left: 25px;
+        bottom: 100px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .selectAbilities {
+        position: relative;
+        left: 100px;
+        bottom: 100px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .title-abi {
+        position: relative;
+        top: 13px;
+        left: 160px;
+        font-size: 15px;
+    }
+
+    .title-mov {
+        position: relative;
+        bottom: 5px;
+        left: 20px;
+        font-size: 15px;
+    }
+
+    .fa-hand-point-left {
+        position: relative;
+        left: 20px;
+        bottom: 980px;
+        font-size: 50px;
+    }
+
+    .back-page {
+        position: relative;
+        left: 30px;
+        bottom: 980px;
+        font-size: 20px;
+    }
+}
+   
+
 @media (min-width: 768px) {
     .poke-container{
         grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -857,6 +1055,47 @@ body {
     }
 }
   /* responsive  pagina principal */
+
+  @media (min-width: 360px){
+    .gif {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -320px;
+    right: 0;  
+  }
+  .title {
+      position: relative;
+      left: 400px;
+      font-size: 20px;
+  }
+
+  .enter {
+    position: relative;
+    left: 400px;
+    
+  }
+
+  .input-title {
+    position: relative;
+    left: 360px; 
+    top: 300px;
+  }
+
+  .principal {
+    position: relative;
+    left: 180px; 
+    top: 400px;
+    width: 80px;
+    height: 80px; 
+  }
+}
+
+
+  
 
   @media (min-width: 576px) {
     .gif {
